@@ -47,17 +47,18 @@ li {
 }
 
 #recipe_img {
-    width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
     border-radius: 15px;
 }
 
-.prepartion_time
-{
+.prepartion_time {
     background-color: hsla(332, 51%, 32%, 0.05);
     border-radius: 10px;
+    max-width: 100%;
     height: 180px;
     font-family: 'Outfit', sans-serif;
-
 }
 
 .prepartion_time h2 {
@@ -70,7 +71,7 @@ li {
 
 .preparation_list {
     margin: 10px 20px;
-}
+    }
 
 .preparation_list li, .ingredients_list li, .instructions_list, .paragraphs {
     opacity: 70%;
@@ -106,8 +107,8 @@ ul.ingredients_list {
 }
 
 .nutrition {
-      margin: 5px 30px;
-}
+    margin: 5px 30px;
+ }
 
 .kcal {
     color: hsl(14, 45%, 36%);
@@ -118,9 +119,50 @@ ul.ingredients_list {
 .fat_kcal {
     color: hsl(14, 45%, 36%);
     font-weight: 700;
-    margin: auto 355px;
+    margin: auto;
+    padding-left: 20px;
 }
 
 .nutrition, .nutrition_divider {
     opacity: 60%;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: white;
+    }
+    .recipe_card {
+        height: 1750px;
+        margin: 0px 100px;
+    }
+
+    .recipe {
+        margin: 0 50px auto;
+    }
+
+    #recipe_img {
+        border-radius: 0px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .prepartion_time {
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .fat_kcal {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .prepartion_time {
+        width: 350px;
+    }
 }
